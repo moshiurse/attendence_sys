@@ -56,14 +56,18 @@ created_at timestamp,
 PRIMARY KEY(record_id)
 )
 
-CREATE TABLE attendence(
-attendence_id int NOT NULL AUTO_INCREMENT,
+CREATE TABLE attendance(
+attendance_id int NOT NULL AUTO_INCREMENT,
 student_id int NOT NULL,
-attendnce_date Date NOT NULL,
+attendance_date Date NOT NULL,
 created_at timestamp,
 PRIMARY KEY(attendence_id),
-CONSTRAINT fk_attendnce_student_id FOREIGN KEY(student_id) REFERENCES student(st_id)
+CONSTRAINT fk_attendance_student_id FOREIGN KEY(student_id) REFERENCES student(st_id)
 )
+
+
+
+
 
 
 
